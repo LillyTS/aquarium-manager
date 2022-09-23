@@ -1,0 +1,6 @@
+<mat-card class="card">
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle *ngIf="liters != undefined; else elseBlock" >{{liters}}L</mat-card-subtitle>
+    <ng-template #elseBlock><mat-card-subtitle>{{dimensions.width}}x{{dimensions.length}}x{{dimensions.height}}</mat-card-subtitle></ng-template>
+    <mat-card-content> Aquarium information	</mat-card-content>
+</mat-card>

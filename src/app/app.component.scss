@@ -1,0 +1,29 @@
+@import "https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Varela+Round&display=swap";
+
+.app {
+  margin: 1%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  &:hover {
+    cursor: default;
+  }
+}
+
+h1 {
+  font-family: Bungee Spice;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cards {
+    justify-content: center;
+  }
+  app-card {
+    margin: 0.5%;
+  }
+}
