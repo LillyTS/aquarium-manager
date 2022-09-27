@@ -1,6 +1,25 @@
-<mat-card class="card">
-    <mat-card-title>{{title}}</mat-card-title>
-    <mat-card-subtitle *ngIf="liters != undefined; else elseBlock" >{{liters}}L</mat-card-subtitle>
-    <ng-template #elseBlock><mat-card-subtitle>{{dimensions.width}}x{{dimensions.length}}x{{dimensions.height}}</mat-card-subtitle></ng-template>
-    <mat-card-content> Aquarium information	</mat-card-content>
+<mat-card class="card scrollable-content">
+  <mat-card-title>{{ title }}</mat-card-title>
+  <mat-card-subtitle *ngIf="liters != undefined; else elseBlock"
+    >{{ liters }}L ({{ dimensions.width }}x{{ dimensions.length }}x{{
+      dimensions.height
+    }})
+  </mat-card-subtitle>
+  <ng-template #elseBlock
+    ><mat-card-subtitle
+      >{{ dimensions.width }}x{{ dimensions.length }}x{{
+        dimensions.height
+      }}</mat-card-subtitle
+    ></ng-template
+  >
+  <mat-card-content>
+    <p *ngIf="fish != ''" class="content-title">Fish</p>
+    <p [innerText]="fish"></p>
+    <p *ngIf="snails != ''" class="content-title">Snails</p>
+    <p [innerText]="snails"></p>
+    <p *ngIf="shrimps != ''" class="content-title">Shrimp</p>
+    <p [innerText]="shrimps"></p>
+    <p *ngIf="plants != ''" class="content-title">Plants</p>
+    <p [innerText]="plants"></p>
+  </mat-card-content>
 </mat-card>
