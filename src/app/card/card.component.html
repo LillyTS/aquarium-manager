@@ -6,7 +6,16 @@
     }}x{{ aquarium.dimensions.height }})
   </mat-card-subtitle>
   <ng-template #elseBlock>
-    <mat-card-subtitle>
+    <mat-card-subtitle
+      *ngIf="
+        aquarium.dimensions.width != undefined &&
+        aquarium.dimensions.length != undefined &&
+        aquarium.dimensions.height != undefined &&
+        aquarium.dimensions.width != null &&
+        aquarium.dimensions.length != null &&
+        aquarium.dimensions.height != null
+      "
+    >
       {{ aquarium.dimensions.width }}x{{ aquarium.dimensions.length }}x{{
         aquarium.dimensions.height
       }}
