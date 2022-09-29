@@ -12,7 +12,10 @@
 <div class="app">
   <h1>Aquarium Manager</h1>
   <div class="cards">
-    <app-card></app-card>
+    <app-card
+      *ngFor="let aquarium of aquariums"
+      [aquarium]="aquarium"
+    ></app-card>
   </div>
 </div>
 
